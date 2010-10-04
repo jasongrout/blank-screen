@@ -30,9 +30,6 @@
 			animate:YES];
 
 		[mainWindow setBackgroundColor:[NSColor blackColor]];
-		NSView *contentView = [[[fullscreenWindow contentView] retain] autorelease];
-		[fullscreenWindow setContentView:[[[NSView alloc] init] autorelease]];
-		[mainWindow setContentView:contentView];
 		[mainWindow makeKeyAndOrderFront:nil];
 
 		[fullscreenWindow close];
@@ -58,8 +55,6 @@
 			backing:NSBackingStoreBuffered
 			defer:YES];
 		
-		//NSView *contentView = [[[mainWindow contentView] retain] autorelease];
-		//[mainWindow setContentView:[[[NSView alloc] init] autorelease]];
 		
 		[fullscreenWindow setLevel:NSFloatingWindowLevel];
 		[fullscreenWindow setBackgroundColor:[NSColor blackColor]];
@@ -99,7 +94,6 @@
 	
 	[fullscreenWindow setLevel:NSFloatingWindowLevel];
 	[fullscreenWindow setBackgroundColor:[NSColor blackColor]];
-	//[fullscreenWindow setContentView:contentView];
 	[fullscreenWindow setTitle:[mainWindow title]];
 	[fullscreenWindow makeKeyAndOrderFront:nil];
 	
