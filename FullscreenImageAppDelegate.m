@@ -62,7 +62,6 @@
 		// I like to command-Tab between the blank screen and my other application instead.
 		//[fullscreenWindow setLevel:NSFloatingWindowLevel];
 		[fullscreenWindow setBackgroundColor:[NSColor blackColor]];
-		//[fullscreenWindow setContentView:contentView];
 		[fullscreenWindow setTitle:[mainWindow title]];
 		[fullscreenWindow makeKeyAndOrderFront:nil];
 
@@ -92,9 +91,7 @@
 						styleMask:NSBorderlessWindowMask
 						backing:NSBackingStoreBuffered
 						defer:YES];
-	
-	//NSView *contentView = [[[mainWindow contentView] retain] autorelease];
-	//[mainWindow setContentView:[[[NSView alloc] init] autorelease]];
+
 	
 	// Uncomment to make the blank screen really appear on top of everything else.
 	// I like to command-Tab between the blank screen and my other application instead.
