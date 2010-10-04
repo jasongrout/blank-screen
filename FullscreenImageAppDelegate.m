@@ -19,10 +19,8 @@
 
 - (IBAction)toggleFullscreen:(id)sender
 {
-	[mainWindow  setBackgroundColor:[NSColor blackColor]];
 	if (fullscreenWindow)
 	{
-		
 		NSRect newFrame = [fullscreenWindow frameRectForContentRect:
 			[mainWindow contentRectForFrameRect:[mainWindow frame]]];
 		
@@ -31,6 +29,7 @@
 			display:YES
 			animate:YES];
 
+		[mainWindow setBackgroundColor:[NSColor blackColor]];
 		NSView *contentView = [[[fullscreenWindow contentView] retain] autorelease];
 		[fullscreenWindow setContentView:[[[NSView alloc] init] autorelease]];
 		[mainWindow setContentView:contentView];
