@@ -39,9 +39,12 @@
 		{
 			[NSMenu setMenuBarVisible:YES];
 		}
+		[NSCursor unhide];
+
 	}
 	else
 	{
+		[NSCursor hide];
 		[mainWindow deminiaturize:nil];
 
 		if ([[mainWindow screen] isEqual:[[NSScreen screens] objectAtIndex:0]])
